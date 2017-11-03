@@ -42,9 +42,10 @@ if __name__ == "__main__":
 
         encoded = grid.encode()
         print(f"Puzzle code is: {encoded}")
+        BOT_SKELETON.store_extra_info("encoded_puzzle", encoded)
 
         LOG.info("Sending the picture, and hints and stuff.")
         LOG.info(f"The puzzle, without filled squares, is \n{grid}")
-        status = BOT_SKELETON.send_with_one_media(f"Here's a puzzle! Encoded as: {encoded}", FILENAME)
+        status = BOT_SKELETON.send_with_one_media(f"Here's a puzzle!", FILENAME)
 
         BOT_SKELETON.nap()
