@@ -41,7 +41,7 @@ if __name__ == "__main__":
         grid.to_picture(f"solved_{FILENAME}")
 
         encoded = grid.encode()
-        print(f"Puzzle code is: {encoded}")
+        LOG.info(f"Puzzle code is: {encoded}")
         BOT_SKELETON.store_extra_info("encoded_puzzle", encoded)
 
         LOG.info("Sending the picture, and hints and stuff.")
