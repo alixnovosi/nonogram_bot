@@ -46,6 +46,14 @@ if __name__ == "__main__":
 
         LOG.info("Sending the picture, and hints and stuff.")
         LOG.info(f"The puzzle, without filled squares, is \n{grid}")
-        status = BOT_SKELETON.send_with_one_media(f"Here's a puzzle!", FILENAME)
+
+        TEXT = random.choice([
+            "Here's a puzzle!",
+            "I've made a puzzle for you.",
+            "I've made a puzzle for you!",
+            "Please enjoy this puzzle.",
+
+        ])
+        status = BOT_SKELETON.send_with_one_media(TEXT, FILENAME)
 
         BOT_SKELETON.nap()
