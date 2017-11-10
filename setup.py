@@ -13,11 +13,13 @@ setup(author="Andrew Michaud",
           "console_scripts": ["nonobot_bot = nonobot_bot.__main__:main"]
       },
 
-      install_requires=["botskeleton>=1.0.4", "nonogen"],
+      install_requires=["botskeleton>=1.1.0", "nonogen"],
 
       license="BSD3",
 
       name="nonobot_bot",
+
+      python_requires=">=3.6",
 
       packages=find_packages(),
 

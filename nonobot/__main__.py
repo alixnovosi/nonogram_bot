@@ -38,7 +38,7 @@ if __name__ == "__main__":
         grid.to_picture(FILENAME)
 
         LOG.info("Saving with solutions as well.")
-        grid.to_picture(f"solved_{FILENAME}")
+        grid.to_picture(f"solved_{FILENAME}", has_value_color="black")
 
         encoded = grid.encode()
         LOG.info(f"Puzzle code is: {encoded}")
