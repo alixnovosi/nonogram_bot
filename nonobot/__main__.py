@@ -44,16 +44,22 @@ if __name__ == "__main__":
         LOG.info(f"Puzzle code is: {encoded}")
         BOT_SKELETON.store_extra_info("encoded_puzzle", encoded)
 
+        solution_url = f"https://andrewmichaud.com/nonogram?board={encoded}&solved=true"
+        url = f"https://andrewmichaud.com/nonogram?board={encoded}"
+
         LOG.info("Sending the picture, and hints and stuff.")
         LOG.info(f"The puzzle, without filled squares, is \n{grid}")
 
-        TEXT = random.choice([
+        message = random.choice([
             "Here's a puzzle!",
             "I've made a puzzle for you.",
             "I've made a puzzle for you!",
             "Please enjoy this puzzle.",
 
         ])
+        TEXT = (f"{message}\n" +
+                f"You can view the solution at {solution_url}." +
+                f"You can see the bare puzzle (not playable) at {url}")
         status = BOT_SKELETON.send_with_one_media(TEXT, FILENAME)
 
         BOT_SKELETON.nap()
