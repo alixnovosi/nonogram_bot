@@ -58,7 +58,7 @@ if __name__ == "__main__":
 
         ])
         TEXT = (f"{message}\n" +
-                f"You can view the solution at {solution_url}." +
+                f"You can view the solution at {solution_url}.\n" +
                 f"You can see the bare puzzle (not playable) at {url}")
         status = BOT_SKELETON.send_with_one_media(TEXT, FILENAME)
 
