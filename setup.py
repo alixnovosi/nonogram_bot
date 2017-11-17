@@ -13,7 +13,7 @@ setup(author="Andrew Michaud",
           "console_scripts": ["nonobot_bot = nonobot_bot.__main__:main"]
       },
 
-      install_requires=["botskeleton>=1.1.0", "nonogen"],
+      install_requires=["botskeleton>=1.2.2", "nonogen"],
 
       license="BSD3",
 
