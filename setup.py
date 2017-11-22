@@ -10,20 +10,20 @@ setup(author="Andrew Michaud",
       author_email="bots@mail.andrewmichaud.com",
 
       entry_points={
-          "console_scripts": ["nonobot_bot = nonobot_bot.__main__:main"]
+          "console_scripts": ["nonogram_bot = nonogram_bot.__main__:main"]
       },
 
       install_requires=["botskeleton>=1.2.2", "nonogen"],
 
       license="BSD3",
 
-      name="nonobot_bot",
+      name="nonogram_bot",
 
       python_requires=">=3.6",
 
       packages=find_packages(),
 
       # Project"s main homepage
-      url="https://github.com/andrewmichaud/nono_bot",
+      url="https://github.com/andrewmichaud/nonogram_bot",
 
       version=VERSION)
