@@ -18,7 +18,7 @@ if __name__ == "__main__":
     SECRETS_DIR = path.join(path.abspath(path.dirname(__file__)), "SECRETS")
     BOT_SKELETON = botskeleton.BotSkeleton(SECRETS_DIR, bot_name="nono_bot", delay=DELAY)
 
-    LOG = botskeleton.set_up_logging()
+    LOG = BOT_SKELETON.log
 
     FILENAME = f"nonogrid_{datetime.now()}.jpg"
 
