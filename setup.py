@@ -13,7 +13,7 @@ setup(author="Andrew Michaud",
           "console_scripts": ["nonogram_bot = nonogram_bot.__main__:main"]
       },
 
-      install_requires=["botskeleton>=2.0.2", "nonogen"],
+      install_requires=["botskeleton>=2.0.5", "nonogen"],
 
       license="BSD3",
 
