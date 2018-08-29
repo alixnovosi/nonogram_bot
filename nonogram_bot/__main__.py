@@ -20,7 +20,7 @@ if __name__ == "__main__":
 
     LOG = BOT_SKELETON.log
 
-    FILENAME = f"nonogrid_{datetime.now()}.jpg"
+    FILENAME = f"nonogrid_{datetime.now()}.png"
 
     while True:
         LOG.info("Generating a puzzle")
