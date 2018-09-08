@@ -44,8 +44,8 @@ if __name__ == "__main__":
         LOG.info(f"Puzzle code is: {encoded}")
         BOT_SKELETON.store_extra_info("encoded_puzzle", encoded)
 
-        solution_url = f"https://andrewmichaud.com/nonogram?board={encoded}&solved=true"
-        url = f"https://andrewmichaud.com/nonogram?board={encoded}"
+        url = f"https://drew.life/nonogram?board={encoded}"
+        solution_url = f"{url}&solved=true
 
         LOG.info("Sending the picture, and hints and stuff.")
         LOG.info(f"The puzzle, without filled squares, is \n{grid}")
