@@ -45,7 +45,7 @@ if __name__ == "__main__":
         BOT_SKELETON.store_extra_info("encoded_puzzle", encoded)
 
         url = f"https://drew.life/nonogram?board={encoded}"
-        solution_url = f"{url}&solved=true
+        solution_url = f"{url}&solved=true"
 
         LOG.info("Sending the picture, and hints and stuff.")
         LOG.info(f"The puzzle, without filled squares, is \n{grid}")
