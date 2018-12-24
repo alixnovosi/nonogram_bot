@@ -1,5 +1,6 @@
 """Main class for bot."""
 
+import os
 import random
 import sys
 import time
@@ -61,5 +62,7 @@ if __name__ == "__main__":
                 f"You can view the solution at {solution_url}.\n" +
                 f"You can see the bare puzzle (not playable) at {url}")
         status = BOT_SKELETON.send_with_one_media(TEXT, FILENAME)
+
+        os.remove(FILENAME)
 
         BOT_SKELETON.nap()
