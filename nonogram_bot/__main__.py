@@ -25,7 +25,7 @@ if __name__ == "__main__":
 
     while True:
         LOG.info("Generating a puzzle")
-        grid = nonogen.nono.NonoGrid(random.choice(range(5, 21)), random.choice(range(5, 21)))
+        grid = nonogen.nono.NonoGrid(random.choice(range(5, 16)), random.choice(range(5, 16)))
 
         LOG.info(f"Generated a {len(grid.squares[0])} by {len(grid.squares)} puzzle.")
 
