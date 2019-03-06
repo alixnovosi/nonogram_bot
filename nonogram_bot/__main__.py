@@ -10,10 +10,8 @@ from os import path
 import botskeleton
 import nonogen
 
-
 # Delay between tweets in seconds.
 DELAY = 3600 * 6
-
 
 if __name__ == "__main__":
     SECRETS_DIR = path.join(path.abspath(path.dirname(__file__)), "SECRETS")
@@ -61,7 +59,8 @@ if __name__ == "__main__":
         TEXT = (f"{message}\n" +
                 f"You can view the solution at {solution_url}.\n" +
                 f"You can solve it yourself at {url}")
-        status = BOT_SKELETON.send_with_one_media(TEXT, FILENAME)
+        CAPTION = f"An unsolved {board.height} by {board.width} cell nonogram board."
+        status = BOT_SKELETON.send_with_one_media(TEXT, FILENAME, CAPTION)
 
         os.remove(FILENAME)
 

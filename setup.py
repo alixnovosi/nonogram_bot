@@ -7,13 +7,13 @@ with open(path.join(HERE, "VERSION"), encoding="utf-8") as f:
     VERSION = f.read().strip()
 
 setup(author="Andrew Michaud",
-      author_email="bots@mail.andrewmichaud.com",
+      author_email="bots+nonogram@mail.andrewmichaud.com",
 
       entry_points={
           "console_scripts": ["nonogram_bot = nonogram_bot.__main__:main"]
       },
 
-      install_requires=["botskeleton>=3.0.2", "nonogen"],
+      install_requires=["botskeleton>=3.1.2", "nonogen"],
 
       license="BSD3",
 
@@ -23,7 +23,6 @@ setup(author="Andrew Michaud",
 
       packages=find_packages(),
 
-      # Project"s main homepage
-      url="https://github.com/andrewmichaud/nonogram_bot",
+      url="https://github.com/alixnovosi/nonogram_bot",
 
       version=VERSION)
