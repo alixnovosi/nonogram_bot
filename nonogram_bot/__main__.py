@@ -36,9 +36,6 @@ if __name__ == "__main__":
         LOG.info("Printing the hints and stuff.")
         grid.to_picture(FILENAME)
 
-        LOG.info("Saving with solutions as well.")
-        grid.to_picture(f"solved_{FILENAME}", has_value_color="black")
-
         encoded = grid.encode()
         LOG.info(f"Puzzle code is: {encoded}")
         BOT_SKELETON.store_extra_info("encoded_puzzle", encoded)
