@@ -17,6 +17,8 @@ if __name__ == "__main__":
     SECRETS_DIR = path.join(path.abspath(path.dirname(__file__)), "SECRETS")
     BOT_SKELETON = botskeleton.BotSkeleton(SECRETS_DIR, bot_name="nono_bot", delay=DELAY)
 
+    FONT_NAME = path.join(SECRETS_DIR, "FreeMono.ttf")
+
     LOG = BOT_SKELETON.log
 
     FILENAME = f"nonogrid_{datetime.now()}.png"
@@ -34,7 +36,7 @@ if __name__ == "__main__":
         grid.gen_hints()
 
         LOG.info("Printing the hints and stuff.")
-        grid.to_picture(FILENAME)
+        grid.to_picture(filename=FILENAME, font_name=FONT_NAME)
 
         encoded = grid.encode()
         LOG.info(f"Puzzle code is: {encoded}")
